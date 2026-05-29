@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Suporte de TI em Santo André | Vtech Facilities</title>
+  <meta name="description" content="Suporte de TI para empresas em Santo André e ABC Paulista. Manutenção de computadores, notebooks, redes, servidores, backup e contrato mensal de TI." />
+
+  <style>
+    :root {
+      --azul-escuro: #061B36;
+      --azul-ciano: #00BCEB;
+      --branco: #FFFFFF;
+      --cinza-claro: #F4F7FA;
+      --cinza-texto: #5C6670;
+      --verde-whatsapp: #25D366;
+      --verde-whatsapp-hover: #1FB65A;
+      --borda: #E1E8EF;
+      --sombra: 0 18px 40px rgba(6, 27, 54, 0.10);
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--azul-escuro);
+      background: var(--branco);
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 15px;
+      transition: 0.25s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-whatsapp {
+      background: var(--verde-whatsapp);
+      color: var(--branco);
+      box-shadow: 0 12px 26px rgba(37, 211, 102, 0.24);
+    }
+
+    .btn-whatsapp:hover {
+      background: var(--verde-whatsapp-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      color: var(--branco);
+      border-color: rgba(255,255,255,0.32);
+      background: rgba(255,255,255,0.06);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--azul-ciano);
+      background: rgba(0,188,235,0.12);
+      transform: translateY(-2px);
+    }
+
+    .section {
+      padding: 86px 0;
+    }
+
+    .section-title {
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.12;
+      letter-spacing: -1.2px;
+      margin-bottom: 14px;
+    }
+
+    .section-text {
+      color: var(--cinza-texto);
+      font-size: 18px;
+      max-width: 700px;
+    }
+
+    /* HEADER */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 99;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(225,232,239,0.85);
+    }
+
+    .header-inner {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.4px;
+      font-size: 20px;
+    }
+
+    .logo-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--azul-ciano), #0878c9);
+      display: grid;
+      place-items: center;
+      color: var(--branco);
+      font-weight: 900;
+      box-shadow: 0 12px 26px rgba(0,188,235,0.22);
+    }
+
+    .logo small {
+      display: block;
+      font-size: 11px;
+      color: var(--cinza-texto);
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      margin-top: -2px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      color: #29394A;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .nav a:hover {
+      color: var(--azul-ciano);
+    }
+
+    .header .btn {
+      min-height: 44px;
+      padding: 11px 18px;
+      font-size: 14px;
+    }
+
+    /* HERO */
+    .hero {
+      background:
+        radial-gradient(circle at 80% 20%, rgba(0,188,235,0.28), transparent 30%),
+        linear-gradient(135deg, #061B36 0%, #08274D 100%);
+      color: var(--branco);
+      overflow: hidden;
+    }
+
+    .hero-inner {
+      min-height: 670px;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: 52px;
+      padding: 76px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #BDEFFF;
+      background: rgba(0,188,235,0.12);
+      border: 1px solid rgba(0,188,235,0.28);
+      padding: 9px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 5.2vw, 66px);
+      line-height: 1.02;
+      letter-spacing: -2.2px;
+      max-width: 760px;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      font-size: clamp(18px, 2vw, 21px);
+      color: #D6E5F2;
+      max-width: 650px;
+      margin-bottom: 32px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 34px;
+    }
+
+    .trust-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .trust-pill {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 999px;
+      padding: 10px 14px;
+      color: #EAF7FF;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .hero-card {
+      position: relative;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 34px;
+      padding: 26px;
+      box-shadow: 0 30px 70px rgba(0,0,0,0.25);
+    }
+
+    .hero-visual {
+      min-height: 430px;
+      border-radius: 26px;
+      background:
+        linear-gradient(rgba(6,27,54,0.12), rgba(6,27,54,0.58)),
+        url("https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1100&q=80");
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .floating-box {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 22px;
+      background: rgba(255,255,255,0.94);
+      color: var(--azul-escuro);
+      border-radius: 20px;
+      padding: 18px;
+      box-shadow: var(--sombra);
+    }
+
+    .floating-box strong {
+      display: block;
+      font-size: 17px;
+      margin-bottom: 4px;
+    }
+
+    .floating-box span {
+      color: var(--cinza-texto);
+      font-size: 14px;
+    }
+
+    /* PROBLEMS */
+    .problems {
+      background: var(--cinza-claro);
+    }
+
+    .problems-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 46px;
+      align-items: center;
+    }
+
+    .problem-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .problem-item {
+      background: var(--branco);
+      border: 1px solid var(--borda);
+      border-radius: 16px;
+      padding: 18px;
+      font-weight: 800;
+      box-shadow: 0 10px 26px rgba(6,27,54,0.04);
+    }
+
+    .problem-item::before {
+      content: "";
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: var(--azul-ciano);
+      border-radius: 50%;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    .problems .btn {
+      margin-top: 28px;
+    }
+
+    /* SERVICES */
+    .services-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 24px;
+      margin-bottom: 34px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      background: var(--branco);
+      border: 1px solid var(--borda);
+      border-radius: var(--radius);
+      padding: 26px;
+      min-height: 196px;
+      box-shadow: 0 16px 34px rgba(6,27,54,0.05);
+      transition: 0.25s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--sombra);
+      border-color: rgba(0,188,235,0.45);
+    }
+
+    .icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: rgba(0,188,235,0.12);
+      color: var(--azul-ciano);
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      font-weight: 900;
+      font-size: 20px;
+    }
+
+    .service-card h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      letter-spacing: -0.3px;
+    }
+
+    .service-card p {
+      color: var(--cinza-texto);
+      font-size: 15px;
+    }
+
+    /* CONTRACT */
+    .contract {
+      background:
+        radial-gradient(circle at 15% 20%, rgba(0,188,235,0.22), transparent 28%),
+        linear-gradient(135deg, #061B36 0%, #08284D 100%);
+      color: var(--branco);
+    }
+
+    .contract-box {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 52px;
+      align-items: center;
+    }
+
+    .contract .section-text {
+      color: #D6E5F2;
+      margin-bottom: 28px;
+    }
+
+    .contract-list {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 28px;
+      padding: 28px;
+    }
+
+    .contract-list ul {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+    }
+
+    .contract-list li {
+      color: #ECF8FF;
+      font-weight: 700;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .contract-list li::before {
+      content: "✓";
+      color: var(--azul-ciano);
+      font-weight: 900;
+    }
+
+    /* STEPS */
+    .steps {
+      background: var(--branco);
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .step-card {
+      background: var(--cinza-claro);
+      border-radius: var(--radius);
+      padding: 28px;
+      border: 1px solid var(--borda);
+    }
+
+    .step-number {
+      width: 42px;
+      height: 42px;
+      background: var(--azul-escuro);
+      color: var(--branco);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+
+    .step-card h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .step-card p {
+      color: var(--cinza-texto);
+      font-size: 15px;
+    }
+
+    /* FAQ */
+    .faq {
+      background: var(--cinza-claro);
+    }
+
+    .faq-list {
+      margin-top: 34px;
+      display: grid;
+      gap: 12px;
+      max-width: 860px;
+    }
+
+    details {
+      background: var(--branco);
+      border: 1px solid var(--borda);
+      border-radius: 18px;
+      padding: 20px 22px;
+      box-shadow: 0 12px 26px rgba(6,27,54,0.04);
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 800;
+      font-size: 17px;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details p {
+      color: var(--cinza-texto);
+      margin-top: 10px;
+      font-size: 15px;
+    }
+
+    /* FINAL CTA */
+    .final-cta {
+      background: var(--branco);
+      text-align: center;
+    }
+
+    .final-cta .section-text {
+      margin: 0 auto 28px;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: var(--azul-escuro);
+      color: var(--branco);
+      padding: 38px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 28px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer p {
+      color: #C9D8E6;
+      margin-top: 8px;
+      max-width: 520px;
+    }
+
+    .footer-contact {
+      color: #EAF7FF;
+      font-weight: 700;
+      line-height: 1.8;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 100;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: var(--verde-whatsapp);
+      color: var(--branco);
+      display: grid;
+      place-items: center;
+      font-size: 28px;
+      box-shadow: 0 18px 36px rgba(37, 211, 102, 0.34);
+      transition: 0.25s ease;
+    }
+
+    .whatsapp-float:hover {
+      background: var(--verde-whatsapp-hover);
+      transform: translateY(-3px);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 920px) {
+      .nav {
+        display: none;
+      }
+
+      .hero-inner,
+      .problems-grid,
+      .contract-box {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-inner {
+        min-height: auto;
+        padding: 58px 0;
+      }
+
+      .hero-card {
+        padding: 16px;
+      }
+
+      .hero-visual {
+        min-height: 340px;
+      }
+
+      .services-head {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .services-grid,
+      .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .header-inner {
+        height: 70px;
+      }
+
+      .logo {
+        font-size: 17px;
+      }
+
+      .logo-mark {
+        width: 38px;
+        height: 38px;
+      }
+
+      .header .btn {
+        padding: 10px 13px;
+        font-size: 13px;
+      }
+
+      .section {
+        padding: 64px 0;
+      }
+
+      .hero h1 {
+        letter-spacing: -1.4px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .trust-row {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .problem-list,
+      .services-grid,
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card,
+      .step-card,
+      .contract-list {
+        padding: 22px;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+      }
+
+      .whatsapp-float {
+        width: 58px;
+        height: 58px;
+        right: 18px;
+        bottom: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#inicio" class="logo" aria-label="Vtech Facilities">
+        <span class="logo-mark">V</span>
+        <span>
+          Vtech Facilities
+          <small>TI Empresarial</small>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Menu principal">
+        <a href="#inicio">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#planos">Planos de TI</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <a class="btn btn-whatsapp" href="https://wa.me/5511995585051?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Vtech%20Facilities%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.">
+        Falar no WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="container hero-inner">
+        <div>
+          <span class="eyebrow">Assistência Técnica e TI Empresarial</span>
+
+          <h1>Suporte de TI em Santo André para empresas que não podem parar.</h1>
+
+          <p>
+            Mais de 25 anos de experiência em manutenção de computadores, redes, servidores, backup e suporte técnico para empresas no ABC Paulista.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-whatsapp" href="https://wa.me/5511995585051?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Vtech%20Facilities%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.">
+              Solicitar orçamento pelo WhatsApp
+            </a>
+            <a class="btn btn-secondary" href="#servicos">
+              Conhecer serviços
+            </a>
+          </div>
+
+          <div class="trust-row">
+            <span class="trust-pill">+25 anos de experiência</span>
+            <span class="trust-pill">Atendimento remoto e presencial</span>
+            <span class="trust-pill">Santo André e ABC Paulista</span>
+          </div>
+        </div>
+
+        <div class="hero-card" aria-label="Imagem ilustrativa de estrutura de TI">
+          <div class="hero-visual">
+            <div class="floating-box">
+              <strong>TI funcionando, empresa produzindo.</strong>
+              <span>Suporte técnico rápido para computadores, rede, backup e servidores.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section problems">
+      <div class="container problems-grid">
+        <div>
+          <h2 class="section-title">A tecnologia da sua empresa está atrapalhando o trabalho?</h2>
+          <p class="section-text">
+            A Vtech cuida da sua TI para sua equipe continuar trabalhando sem perder tempo com problema técnico.
+          </p>
+          <a class="btn btn-whatsapp" href="https://wa.me/5511995585051?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Vtech%20Facilities%20e%20gostaria%20de%20falar%20com%20um%20t%C3%A9cnico.">
+            Falar com um técnico
+          </a>
+        </div>
+
+        <div class="problem-list">
+          <div class="problem-item">Computador lento</div>
+          <div class="problem-item">Rede caindo</div>
+          <div class="problem-item">Servidor com falha</div>
+          <div class="problem-item">Impressora sem funcionar</div>
+          <div class="problem-item">Arquivos sem backup</div>
+          <div class="problem-item">Empresa sem suporte de TI</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos" class="section services">
+      <div class="container">
+        <div class="services-head">
+          <div>
+            <h2 class="section-title">Soluções de TI para empresas</h2>
+            <p class="section-text">
+              Atendimento técnico para manter computadores, rede, servidores e arquivos funcionando com segurança.
+            </p>
+          </div>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="icon">💻</div>
+            <h3>Manutenção de notebooks</h3>
+            <p>Diagnóstico, reparo, limpeza, troca de peças e melhoria de desempenho.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">🖥️</div>
+            <h3>Manutenção de computadores</h3>
+            <p>Correção de lentidão, formatação, upgrades e suporte técnico completo.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">🛠️</div>
+            <h3>Suporte de TI para empresas</h3>
+            <p>Atendimento técnico para usuários, computadores, sistemas e estrutura de TI.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">🌐</div>
+            <h3>Redes e servidores</h3>
+            <p>Instalação, configuração e manutenção de redes, servidores e compartilhamentos.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">☁️</div>
+            <h3>Backup e nuvem</h3>
+            <p>Proteção dos arquivos da empresa com backup local, remoto e em nuvem.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">📅</div>
+            <h3>Contrato mensal de TI</h3>
+            <p>Suporte recorrente, preventivo e prioritário para empresas que precisam de estabilidade.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="planos" class="section contract">
+      <div class="container contract-box">
+        <div>
+          <h2 class="section-title">Sua empresa com suporte de TI todo mês.</h2>
+          <p class="section-text">
+            Com o contrato mensal da Vtech, sua empresa tem suporte recorrente, manutenção preventiva e prioridade no atendimento.
+          </p>
+          <a class="btn btn-whatsapp" href="https://wa.me/5511995585051?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Vtech%20Facilities%20e%20gostaria%20de%20saber%20sobre%20contrato%20mensal%20de%20TI.">
+            Quero um contrato de TI
+          </a>
+        </div>
+
+        <div class="contract-list">
+          <ul>
+            <li>Suporte remoto e presencial</li>
+            <li>Manutenção preventiva</li>
+            <li>Atendimento a usuários</li>
+            <li>Verificação de backup</li>
+            <li>Organização da rede</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section steps">
+      <div class="container">
+        <h2 class="section-title">Atendimento simples, rápido e direto.</h2>
+        <p class="section-text">
+          Você chama, a Vtech avalia e o suporte é realizado da forma mais adequada para sua empresa.
+        </p>
+
+        <div class="steps-grid">
+          <article class="step-card">
+            <div class="step-number">1</div>
+            <h3>Você chama no WhatsApp</h3>
+            <p>Explique o problema ou envie sua solicitação de suporte.</p>
+          </article>
+
+          <article class="step-card">
+            <div class="step-number">2</div>
+            <h3>A Vtech avalia o problema</h3>
+            <p>Analisamos o cenário e indicamos o melhor caminho para resolver.</p>
+          </article>
+
+          <article class="step-card">
+            <div class="step-number">3</div>
+            <h3>Atendimento remoto ou presencial</h3>
+            <p>O suporte é realizado conforme a necessidade da sua empresa.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq">
+      <div class="container">
+        <h2 class="section-title">Perguntas frequentes</h2>
+        <p class="section-text">
+          Tire as principais dúvidas antes de solicitar atendimento.
+        </p>
+
+        <div class="faq-list">
+          <details>
+            <summary>Vocês atendem em Santo André?</summary>
+            <p>Sim. Atendemos empresas em Santo André e região do ABC Paulista.</p>
+          </details>
+
+          <details>
+            <summary>O atendimento pode ser remoto?</summary>
+            <p>Sim. Muitos problemas podem ser resolvidos por acesso remoto, com mais agilidade.</p>
+          </details>
+
+          <details>
+            <summary>Vocês trabalham com contrato mensal?</summary>
+            <p>Sim. A Vtech oferece planos mensais de suporte de TI para empresas.</p>
+          </details>
+
+          <details>
+            <summary>Vocês fazem manutenção de notebook?</summary>
+            <p>Sim. Fazemos manutenção, diagnóstico, limpeza, troca de peças e melhoria de desempenho.</p>
+          </details>
+
+          <details>
+            <summary>Como peço orçamento?</summary>
+            <p>Basta clicar no botão de WhatsApp e enviar sua solicitação.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="section final-cta">
+      <div class="container">
+        <h2 class="section-title">Precisa de suporte técnico para sua empresa?</h2>
+        <p class="section-text">
+          Conte com a Vtech Facilities: mais de 25 anos de experiência em TI para empresas no ABC Paulista.
+        </p>
+        <a class="btn btn-whatsapp" href="https://wa.me/5511995585051?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Vtech%20Facilities%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.">
+          Solicitar orçamento pelo WhatsApp
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <a href="#inicio" class="logo">
+          <span class="logo-mark">V</span>
+          <span>
+            Vtech Facilities
+            <small>TI Empresarial</small>
+          </span>
+        </a>
+        <p>Assistência Técnica e TI Empresarial em Santo André e ABC Paulista.</p>
+      </div>
+
+      <div class="footer-contact">
+        WhatsApp: 11 99558-5051<br />
+        Site: vtechfacilities.com.br
+      </div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" aria-label="Chamar no WhatsApp" href="https://wa.me/5511995585051?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Vtech%20Facilities%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.">
+    ✆
+  </a>
+</body>
+</html>
